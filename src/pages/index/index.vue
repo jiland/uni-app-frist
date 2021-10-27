@@ -4,6 +4,8 @@
 		<view>
 			<text class="title">{{title}}</text>
 		</view>
+		<u-button>测试按钮u</u-button>
+		<button>测试按钮o</button>
 	</view>
 </template>
 
