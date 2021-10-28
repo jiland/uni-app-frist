@@ -2,18 +2,52 @@
 	"easycom": {
 			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
 	},
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/workHome/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				// "navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/vehicleLocation/index",
+			"style": {}
+		},
+		{
+			"path": "pages/myArea/index",
+			"style": {}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		// "navigationBarTextStyle": "black",
+		// "navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"borderStyle": "#333",
+		"backgroundColor": "#FFFFFF",
+		"color": "#8F8F94",
+		"selectedColor": "#1a75d1",
+		"list": [{
+				"pagePath": "pages/workHome/index",
+				"iconPath": "static/u31.png",
+				"selectedIconPath": "static/u26.png",
+				"text": "工作台"
+			},
+			{
+				"pagePath": "pages/vehicleLocation/index",
+				"iconPath": "static/u42.png",
+				"selectedIconPath": "static/u37.png",
+				"text": "车辆位置"
+			},
+			{
+				"pagePath": "pages/myArea/index",
+				"iconPath": "static/u53.png",
+				"selectedIconPath": "static/u48.png",
+				"text": "我的"
+			}
+		]
 	}
 }
