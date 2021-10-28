@@ -2,7 +2,7 @@
 
 <template>
 	<view class="card-main" >
-		<view v-for="(item,index) in data" :key="index" class="card-each">
+		<view v-for="(item,index) in data" :key="index" class="card-each" :style="backgroundDiv">
 			<table>
 				<tr v-for="(subItem,subKey,subIndex) in label" :key="subIndex">
 					<td>{{subItem}}</td>
@@ -26,11 +26,16 @@
 			data:{
 				type: Array,
 				default:[]
+			},
+			imageSrc:{
+				
 			}
 		},
 		data(){
 			return{
-				
+				backgroundDiv: {
+					backgroundImage: 'url(' + this.imageSrc + ')'
+				}
 			}
 		},
 		methods:{
@@ -50,6 +55,7 @@
 		padding: 10rpx;
 		padding-left: 200rpx;
 		margin-bottom: 10rpx;
+		background-size: 100% 100%;
 	}
 	.card-each td{
 		padding: 10rpx;

@@ -11,35 +11,11 @@
 			<!-- 巡逻任务 -->
 			<CardHeader title="巡逻任务" @subClick="patrolMore"></CardHeader>
 			<!-- 巡逻任务卡片 -->
-			<cardTable :label="Lablepatrol" :data="data1"/>
-			<view class="patrolCard" v-for="(item,index) in data1" :key="index">
-				<table>
-					<tr>
-						<td>巡逻名称</td>
-						<td>{{item.a}}</td>
-					</tr>
-					<tr>
-						<td>车牌号</td>
-						<td>{{item.b}}</td>
-					</tr>
-					<tr>
-						<td>路线</td>
-						<td>{{item.c}}</td>
-					</tr>
-					<tr>
-						<td>开始时间</td>
-						<td>{{item.d}}</td>
-					</tr>
-					<tr>
-						<td>结束时间</td>
-						<td>{{item.e}}</td>
-					</tr>
-				</table>
-			</view>
+			<CardTable :label="Lablepatrol" :data="data1" imageSrc="static/u74.png"/>
 			<!-- 巡逻任务 -->
-			<CardHeader title="安全事件" @subClick="securityMore"></CardHeader>
-			<CardHeader></CardHeader>
-			<ul class="securityCard" >
+			<CardHeader title="安全事件" @subClick="securityMore"/>
+			<CardImg :data="data2" lable="报警类型" label="报警类型" imageSrc="static/u94.png"/>
+		<!-- 	<ul class="securityCard" >
 				<li class="securityCard-term" v-for="(item,index) in data2" :key="index">
 					<icon class="securityIcon" type="warn" size="26"/>
 					<view>
@@ -54,16 +30,17 @@
 						</view>
 					</view>
 				</li>
-			</ul>
+			</ul> -->
 		</view>
 	</view>
 </template>
 
 <script>
 	import CardHeader from "components/card-header.vue";
-	import cardTable from "components/card-table.vue"
+	import CardTable from "components/card-table.vue";
+	import CardImg from "components/card-img.vue"
 	export default {
-		components:{CardHeader,cardTable},
+		components:{CardHeader,CardTable,CardImg},
 		data() {
 			return {
 				Lablepatrol:{

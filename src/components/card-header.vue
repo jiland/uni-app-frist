@@ -2,8 +2,8 @@
 入参：title：左侧标题项；subTitle：右侧功能项 -->
 <template>
 	<view class="header-Bar">
-		<view>{{title}}</view>
-		<view @click="subHandle">{{subTitle}}</view>
+		<view class="header-title">{{title}}</view>
+		<view class="header-btn" @click="subHandle">{{subTitle}}</view>
 	</view>
 </template>
 
@@ -33,12 +33,12 @@
 	}
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 	.header-Bar{
 		display: flex;
 		justify-content: space-between;
-		view{
-			padding: 10rpx;
-		}
+	}
+	.header-title,.header-btn{
+		padding: 10rpx;
 	}
 </style>
