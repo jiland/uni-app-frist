@@ -5,18 +5,44 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/workHome/index",
-			"style": {
-				// "navigationBarTitleText": "uni-app"
+			"path": "pages/work/index", //工作台
+			"style":{
+				"navigationStyle":"custom"
 			}
 		},
 		{
-			"path": "pages/vehicleLocation/index",
+			"path": "pages/vehicle/index", //车辆位置
 			"style": {}
 		},
 		{
-			"path": "pages/myArea/index",
-			"style": {}
+			"path": "pages/home/index",   //我的
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/patrol/index",
+			"style": {
+				"navigationBarTitleText": "巡逻任务"
+			}
+		},
+		{
+			"path": "pages/security/index",
+			"style": {
+				"navigationBarTitleText": "安全事件管理"
+			}
+		},
+		{
+			"path": "pages/password/index",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style":{
+				"navigationStyle":"custom"
+			}
 		}
 	],
 	"globalStyle": {
@@ -31,19 +57,19 @@
 		"color": "#8F8F94",
 		"selectedColor": "#1a75d1",
 		"list": [{
-				"pagePath": "pages/workHome/index",
+				"pagePath": "pages/work/index",
 				"iconPath": "static/u31.png",
 				"selectedIconPath": "static/u26.png",
 				"text": "工作台"
 			},
 			{
-				"pagePath": "pages/vehicleLocation/index",
+				"pagePath": "pages/vehicle/index",
 				"iconPath": "static/u42.png",
 				"selectedIconPath": "static/u37.png",
 				"text": "车辆位置"
 			},
 			{
-				"pagePath": "pages/myArea/index",
+				"pagePath": "pages/home/index",
 				"iconPath": "static/u53.png",
 				"selectedIconPath": "static/u48.png",
 				"text": "我的"

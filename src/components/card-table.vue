@@ -52,13 +52,29 @@
 		background-color: #007AFF;
 		border-radius: 20rpx;
 		color: #FFFFFF;
-		padding: 10rpx;
-		padding-left: 200rpx;
-		margin-bottom: 10rpx;
+		/* padding: 10rpx; */
+		padding-left: 250rpx;
+		/* margin-bottom: 10rpx; */
 		background-size: 100% 100%;
+		
+		width: 715rpx;
+		height: 195rpx;
+		margin: auto;
+		margin-top: 13rpx;
+		margin-bottom: 13rpx;
+	}
+	table{
+		padding-top: 7rpx;
 	}
 	.card-each td{
-		padding: 10rpx;
+		/* padding: 2rpx; */
+	/* 	text-align: left;
+		font-size: 18rpx */
+		height: 28rpx;
+		line-height: 28rpx;
 		text-align: left;
+		padding: 3rpx 24rpx 3rpx 0  ;
+		
+		font-size: 18rpx
 	}
 </style>

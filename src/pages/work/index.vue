@@ -11,10 +11,10 @@
 			<!-- 巡逻任务 -->
 			<CardHeader title="巡逻任务" @subClick="patrolMore"></CardHeader>
 			<!-- 巡逻任务卡片 -->
-			<CardTable :label="Lablepatrol" :data="data1" imageSrc="static/u74.png"/>
+			<CardTable :label="store.lablepatrol" :data="data1" :imageSrc="store.imgUrl.patrol"/>
 			<!-- 巡逻任务 -->
 			<CardHeader title="安全事件" @subClick="securityMore"/>
-			<CardImg :data="data2" lable="报警类型" label="报警类型" imageSrc="static/u94.png"/>
+			<CardImg :data="data2" :lable="store.lableSecurity" label="报警类型" :imageSrc="store.imgUrl.security"/>
 		<!-- 	<ul class="securityCard" >
 				<li class="securityCard-term" v-for="(item,index) in data2" :key="index">
 					<icon class="securityIcon" type="warn" size="26"/>
@@ -43,13 +43,14 @@
 		components:{CardHeader,CardTable,CardImg},
 		data() {
 			return {
-				Lablepatrol:{
-					a:"巡逻名称",
-					b:"车牌号",
-					c:"路线",
-					d:"开始时间",
-					e:"结束时间"
-				},
+				// Lablepatrol:{
+				// 	a:"巡逻名称",
+				// 	b:"车牌号",
+				// 	c:"路线",
+				// 	d:"开始时间",
+				// 	e:"结束时间"
+				// },
+				store:{...this.$store.state},
 				patrol:{
 					
 				},
@@ -101,10 +102,16 @@
 		},
 		methods: {
 			patrolMore(){
-				console.log("更多巡逻任务")
+				console.log("更多巡逻任务",this.$store.state.lablepatrol)
+				uni.navigateTo({
+					url:"/pages/patrol/index"
+				})
 			},
 			securityMore(){
 				console.log("更多安全事件")
+				uni.navigateTo({
+					url:"/pages/security/index"
+				})
 			},
 		}
 	}
