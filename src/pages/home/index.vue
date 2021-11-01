@@ -26,7 +26,10 @@
 				})
 			},
 			logout(){
-				
+				uni.removeStorageSync('id');
+				uni.navigateTo({
+					url:('/pages/login/index')
+				})
 			}
 		}
 	}

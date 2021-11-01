@@ -30,12 +30,25 @@
 				}
 			}
 		},
+		created(){
+			let id = uni.getStorageSync('id')
+			if(id){
+				this.account = id
+			}
+		},
 		methods:{
 			login(){
 				console.log("login")
-				uni.switchTab({
-					url:"/pages/work/index"
-				})
+				
+				if(this.account && this.password){
+					uni.setStorageSync('id', this.account);
+					uni.switchTab({
+						url:"/pages/work/index"
+					})
+				}
+				
+				
+				
 			}
 		}
 	}
