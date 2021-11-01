@@ -103,9 +103,10 @@
 		methods: {
 			patrolMore(){
 				console.log("更多巡逻任务",this.$store.state.lablepatrol)
-				uni.navigateTo({
-					url:"/pages/patrol/index"
-				})
+				// uni.navigateTo({
+				// 	url:"/pages/patrol/index"
+				// })
+				this.$Router.push({path:"/pages/patrol/index"})
 			},
 			securityMore(){
 				console.log("更多安全事件")

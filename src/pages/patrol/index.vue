@@ -41,6 +41,9 @@
 				]
 			}
 		},
+		onLoad(){
+			console.log(this.$Route,'r')
+		},
 		methods:{
 			handleDate(e){
 				console.log(e,'e')
